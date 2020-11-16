@@ -13,10 +13,11 @@
 <script>
 import SideMenu from './SideMenu'
 import Books from './Books'
+import ImgUpload from '../common/ImgUpload'
 
 export default {
   name: 'AppLibrary',
-  components: {Books, SideMenu},
+  components: {Books, SideMenu, ImgUpload},
   methods: {
     listByCategory () {
       var _this = this
