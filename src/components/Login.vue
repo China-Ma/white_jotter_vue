@@ -41,9 +41,12 @@ export default {
         })
         .then(successResponse => {
           if (successResponse.data.code === 200) {
+            this.$message.success('登陆成功')
             _this.$store.commit('login', _this.loginForm)
             var path = this.$route.query.redirect
             this.$router.replace({path: path === '/' || path === undefined ? '/index' : path})
+          } else {
+            return this.$message.error('账号或密码错误')
           }
         })
         .catch(failResponse => {
